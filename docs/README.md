@@ -1,36 +1,60 @@
 # Media Metadata Documentation Hub
 
-This folder is the central documentation for fixing and validating media metadata at scale.
+Use this folder to understand **what to run**, **why to run it**, and **how to verify output**.
 
-## Quick start (recommended)
+## Recommended execution order
 
-1. Open Command Prompt in the target media folder.
-2. Run one script from `scripts\windows` based on folder type:
-   - `run_strategy_a_filename_priority.bat`
-   - `run_strategy_b_filemodify_once.bat`
-   - `run_strategy_c_sequence_timeline.bat START_NUM "YYYY:MM:DD HH:MM:SS" STEP_SECONDS`
-3. Run `verify_folder.bat`.
-4. Spot-check with `verify_file.bat "filename.ext"`.
-5. Review generated logs under `logs\`.
+1. Read `runbook-windows.md` for the complete SOP.
+2. Choose one strategy script from `../scripts/windows/README.md`.
+3. Run verification steps from `verification-and-signoff.md`.
+4. If errors appear, use `error-catalog.md` for exact recovery actions.
+
+## Step-by-step command flow
+
+### Step 1: Open Command Prompt in target media folder
+
+All scripts should be run from the folder that contains your media files.
+
+### Step 2: Choose exactly one metadata strategy
+
+| Situation | Command |
+|---|---|
+| Mixed folder, some filenames include real date/time | `..\scripts\windows\run_strategy_a_filename_priority.bat` |
+| Fresh folder, Date Modified is trusted, one-time write | `..\scripts\windows\run_strategy_b_filemodify_once.bat` |
+| Sequence-only filenames (for example `Media_049682`) | `..\scripts\windows\run_strategy_c_sequence_timeline.bat START_NUM "YYYY:MM:DD HH:MM:SS" STEP_SECONDS` |
+
+### Step 3: Run verification
+
+```bat
+..\scripts\windows\verify_folder.bat
+..\scripts\windows\verify_file.bat "filename.ext"
+```
+
+### Step 4: Review logs
+
+Every script creates a timestamped log file under:
+
+`logs\YYYYMMDD_HHMMSS_<script-name>.log`
+
+### Step 5: Decide go/no-go
+
+Use `verification-and-signoff.md` checklist before upload.
+
+## How scripts respond
+
+- **Normal success**: script prints `Exit code: 0` and log file path.
+- **ExifTool missing**: script prints `ERROR: ExifTool not found ...` and exits with code `2`.
+- **Missing required argument** (parameterized scripts): usage text is printed and script exits non-zero.
+- **Verify file not found** (`verify_file.bat`): script prints file-not-found error and exits non-zero.
 
 ## What to read first
 
-1. `runbook-windows.md`
-   - Main Standard Operating Procedure (SOP) for Windows + ExifTool.
-   - Includes safe workflows for mixed folders, date-from-filename folders, and sequence-only folders.
+1. `runbook-windows.md` - full script + manual command SOP.
+2. `../scripts/windows/README.md` - each script purpose, command, and output.
+3. `verification-and-signoff.md` - validation and sign-off criteria.
+4. `error-catalog.md` - warning/error meanings and fixes.
+5. `conversation-analysis.md` - workflow reasoning and history context.
 
-2. `../scripts/windows/README.md`
-   - Script catalog, usage examples, and logging behavior.
+## Core rule
 
-3. `conversation-analysis.md`
-   - Analysis of the 31-chat history: user intent, decision points, and workflow evolution.
-
-4. `error-catalog.md`
-   - Known errors/warnings and exact fixes.
-
-5. `verification-and-signoff.md`
-   - Verification commands and upload go/no-go checklist for Google Photos.
-
-## Core rule in one line
-
-Never run a FileModifyDate-to-metadata command twice on already-processed files unless you intentionally want to replace metadata with current file system timestamps.
+Never rerun a FileModifyDate-to-metadata write strategy on already-processed files unless replacement is intentional.
