@@ -57,4 +57,4 @@ Use `verification-and-signoff.md` checklist before upload.
 
 ## Core rule
 
-Never run a FileModifyDate-to-metadata write strategy again on already-processed files unless replacement is intentional.
+Never rerun a FileModifyDate-to-metadata write strategy on already-processed files unless replacement is intentional.

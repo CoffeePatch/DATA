@@ -29,6 +29,12 @@ set EXIFTOOL_PATH=C:\path\to\exiftool.exe
 ..\scripts\windows\run_strategy_c_sequence_timeline.bat 49682 "2025:08:07 14:34:00" 300
 ```
 
+Concrete example:
+
+- Start number: `49682`
+- Base datetime: `2025:08:07 14:34:00`
+- Step seconds: `300` (5 minutes per sequence increment)
+
 ## Exit behavior
 
 - `Exit code: 0` = script completed.
