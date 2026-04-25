@@ -36,6 +36,39 @@ Typical priority behavior is:
 
 Because different services and file formats interpret fallback differently, the safest approach is to populate key embedded tags consistently before upload.
 
+### 3.1 Timeline-critical metadata tags (practical priority)
+
+| Media type | High-impact tags | Why they matter |
+|---|---|---|
+| Images (JPG/JPEG/HEIC) | `DateTimeOriginal`, `CreateDate`, `ModifyDate` | These are the core EXIF capture-time signals used by gallery timelines. |
+| Videos (MP4/MOV) | `QuickTime:CreateDate`, `QuickTime:MediaCreateDate`, `QuickTime:CreationDate` | QuickTime date fields are primary timeline anchors for many video uploads. |
+| Fallback only | `FileModifyDate` | Useful only as a fallback source when true capture tags are missing. |
+
+Timezone support tags like `OffsetTimeOriginal` improve timeline consistency when platforms interpret local vs UTC differently.
+
+### 3.2 What is "correct" metadata vs "not correct"
+
+- **Correct metadata**:
+  - capture-time tags exist
+  - image/video date fields agree with each other
+  - timezone context is present or date values are consistently interpreted
+- **Not correct metadata**:
+  - missing capture-time tags
+  - conflicting values across date fields
+  - dates copied from untrusted filesystem timestamps after copy/sync
+  - filename-only date assumptions with no embedded tag support
+
+### 3.3 Android vs Windows behavior (what usually happens)
+
+- **Android (typical camera/media pipeline)**:
+  - usually writes capture dates into EXIF (images) or QuickTime tags (videos)
+  - may vary by app/version; some files can have incomplete timezone fields
+- **Windows (filesystem + media properties)**:
+  - exposes both embedded metadata and filesystem timestamps
+  - copy/move/export can change `FileModifyDate`, which can become unsafe as a future metadata source
+
+Operational rule: prefer embedded capture tags over filesystem times for timeline truth.
+
 ## 4) Why direct upload can fail
 
 Direct upload can produce timeline issues when:
