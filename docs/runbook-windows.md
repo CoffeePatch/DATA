@@ -71,6 +71,7 @@ Run all five checks. They only rename when file content type mismatches extensio
 ### 2.2 Choose exactly one source strategy
 
 Do not mix strategies unless explicitly required.
+For metadata field priority context, see [ExifTool Foundations §3.1 Timeline-critical metadata tags](exiftool-foundations.md#31-timeline-critical-metadata-tags-practical-priority).
 
 ### Strategy A: Filename contains real date/time
 

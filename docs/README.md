@@ -2,12 +2,20 @@
 
 Use this folder to understand **what to run**, **why to run it**, and **how to verify output**.
 
+## Recommended reading for beginners
+
+1. [exiftool-foundations.md](exiftool-foundations.md) - first-principles explanation (what ExifTool is, why timeline metadata matters, Google Photos/cloud behavior, and when parameter changes are truly required).
+2. [runbook-windows.md](runbook-windows.md) - complete script and manual command SOP.
+3. [../scripts/windows/README.md](../scripts/windows/README.md) - script-by-script command reference.
+4. [verification-and-signoff.md](verification-and-signoff.md) - validation checklist before upload.
+5. [error-catalog.md](error-catalog.md) - failure patterns and exact recovery actions.
+
 ## Recommended execution order
 
-1. Read `runbook-windows.md` for the complete SOP.
-2. Choose one strategy script from `../scripts/windows/README.md`.
-3. Run verification steps from `verification-and-signoff.md`.
-4. If errors appear, use `error-catalog.md` for exact recovery actions.
+1. Read [runbook-windows.md](runbook-windows.md) for the complete SOP.
+2. Choose one strategy script from [../scripts/windows/README.md](../scripts/windows/README.md).
+3. Run verification steps from [verification-and-signoff.md](verification-and-signoff.md).
+4. If errors appear, use [error-catalog.md](error-catalog.md) for exact recovery actions.
 
 ## Step-by-step command flow
 
@@ -49,11 +57,12 @@ Use `verification-and-signoff.md` checklist before upload.
 
 ## What to read first
 
-1. `runbook-windows.md` - full script + manual command SOP.
-2. `../scripts/windows/README.md` - each script purpose, command, and output.
-3. `verification-and-signoff.md` - validation and sign-off criteria.
-4. `error-catalog.md` - warning/error meanings and fixes.
-5. `conversation-analysis.md` - workflow reasoning and history context.
+1. [exiftool-foundations.md](exiftool-foundations.md) - beginner-first background and decision logic.
+2. [runbook-windows.md](runbook-windows.md) - full script + manual command SOP.
+3. [../scripts/windows/README.md](../scripts/windows/README.md) - each script purpose, command, and output.
+4. [verification-and-signoff.md](verification-and-signoff.md) - validation and sign-off criteria.
+5. [error-catalog.md](error-catalog.md) - warning/error meanings and fixes.
+6. [conversation-analysis.md](conversation-analysis.md) - workflow reasoning and history context.
 
 ## Core rule
 
