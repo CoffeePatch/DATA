@@ -2,6 +2,13 @@
 
 Central documentation and script pack for repeatable media metadata fixes on Windows with ExifTool.
 
+## Start here (new users)
+
+- [What is ExifTool and why this repo exists](docs/exiftool-foundations.md)
+- [Windows runbook (full SOP)](docs/runbook-windows.md)
+- [Windows scripts quick reference](scripts/windows/README.md)
+- [Verification and sign-off checklist](docs/verification-and-signoff.md)
+
 ## What this repository gives you
 
 - A **script-first workflow** for writing and verifying media date metadata.
@@ -25,20 +32,21 @@ Central documentation and script pack for repeatable media metadata fixes on Win
 
 ## Documentation map
 
-- `docs/README.md` - step-by-step reading and execution order.
-- `docs/runbook-windows.md` - full SOP with script and manual command paths.
-- `docs/verification-and-signoff.md` - go/no-go checks before upload.
-- `docs/error-catalog.md` - known errors, meaning, and fixes.
-- `docs/conversation-analysis.md` - workflow evolution and decision context.
+- [docs/README.md](docs/README.md) - step-by-step reading and execution order.
+- [docs/exiftool-foundations.md](docs/exiftool-foundations.md) - beginner explanation of metadata, cloud timeline behavior, and parameter choices.
+- [docs/runbook-windows.md](docs/runbook-windows.md) - full SOP with script and manual command paths.
+- [docs/verification-and-signoff.md](docs/verification-and-signoff.md) - go/no-go checks before upload.
+- [docs/error-catalog.md](docs/error-catalog.md) - known errors, meaning, and fixes.
+- [docs/conversation-analysis.md](docs/conversation-analysis.md) - workflow evolution and decision context.
 
 ## Script catalog
 
-- `scripts/windows/README.md` - what each script does, when to use it, expected output.
-- `scripts/windows/run_strategy_a_filename_priority.bat`
-- `scripts/windows/run_strategy_b_filemodify_once.bat`
-- `scripts/windows/run_strategy_c_sequence_timeline.bat`
-- `scripts/windows/verify_folder.bat`
-- `scripts/windows/verify_file.bat`
+- [scripts/windows/README.md](scripts/windows/README.md) - what each script does, when to use it, expected output.
+- [scripts/windows/run_strategy_a_filename_priority.bat](scripts/windows/run_strategy_a_filename_priority.bat)
+- [scripts/windows/run_strategy_b_filemodify_once.bat](scripts/windows/run_strategy_b_filemodify_once.bat)
+- [scripts/windows/run_strategy_c_sequence_timeline.bat](scripts/windows/run_strategy_c_sequence_timeline.bat)
+- [scripts/windows/verify_folder.bat](scripts/windows/verify_folder.bat)
+- [scripts/windows/verify_file.bat](scripts/windows/verify_file.bat)
 
 ## Important safety rule
 
