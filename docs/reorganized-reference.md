@@ -7,11 +7,12 @@ The source documents are kept intact on purpose. Do not delete, overwrite, or fl
 ## Canonical reading order
 
 1. [ExifTool Foundations](exiftool-foundations.md) - start here for the background and the core metadata model.
-2. [Windows Runbook](runbook-windows.md) - use this for the step-by-step operating procedure.
-3. [Windows Scripts README](../scripts/windows/README.md) - use this for the folder-based script catalog and command mapping.
-4. [Verification and Sign-off](verification-and-signoff.md) - use this before upload or handoff.
-5. [Error Catalog](error-catalog.md) - use this when something fails or the output looks wrong.
-6. [Conversation Analysis](conversation-analysis.md) - use this as the historical decision trail.
+2. [Cloud Storage Sorting](cloud-storage-sorting/README.md) - choose your target service and read the corresponding guide (Google Photos, Mega, OneDrive, Amazon Photos, iCloud Photos).
+3. [Windows Runbook](runbook-windows.md) - use this for the step-by-step operating procedure.
+4. [Windows Scripts README](../scripts/windows/README.md) - use this for the folder-based script catalog and command mapping.
+5. [Verification and Sign-off](verification-and-signoff.md) - use this before upload or handoff.
+6. [Error Catalog](error-catalog.md) - use this when something fails or the output looks wrong.
+7. [Conversation Analysis](conversation-analysis.md) - use this as the historical decision trail.
 
 ## Source archive snapshot
 

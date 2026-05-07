@@ -6,7 +6,7 @@ Central documentation and script pack for repeatable media metadata fixes on Win
 
 - [Organized reference index](docs/reorganized-reference.md)
 - [What is ExifTool and why this repo exists](docs/exiftool-foundations.md)
-- [Cloud storage sorting behavior (Google Photos, Mega, OneDrive)](docs/google-photos-sorting.md)
+- [Cloud storage sorting behavior (Google Photos, Mega, OneDrive, Amazon, iCloud)](docs/cloud-storage-sorting/README.md)
 - [Windows runbook (full SOP)](docs/runbook-windows.md)
 - [Windows scripts quick reference](scripts/windows/README.md)
 - [Verification and sign-off checklist](docs/verification-and-signoff.md)
@@ -37,7 +37,12 @@ Central documentation and script pack for repeatable media metadata fixes on Win
 - [docs/reorganized-reference.md](docs/reorganized-reference.md) - curated reading order and future-reference capture.
 - [docs/README.md](docs/README.md) - step-by-step reading and execution order.
 - [docs/exiftool-foundations.md](docs/exiftool-foundations.md) - beginner explanation of metadata, cloud timeline behavior, and parameter choices.
-- [docs/google-photos-sorting.md](docs/google-photos-sorting.md) - cloud storage sorting: how Google Photos, Mega, OneDrive prioritize metadata; what tags each media type requires; timezone handling; common failure patterns.
+- [docs/cloud-storage-sorting/README.md](docs/cloud-storage-sorting/README.md) - cloud storage comparison and per-service guides (Google Photos, Mega, OneDrive, Amazon Photos, iCloud Photos).
+  - [docs/cloud-storage-sorting/google-photos.md](docs/cloud-storage-sorting/google-photos.md) - Google Photos sorting, metadata priority, timezone handling.
+  - [docs/cloud-storage-sorting/mega.md](docs/cloud-storage-sorting/mega.md) - Mega sorting by FileModifyDate; lenient metadata handling.
+  - [docs/cloud-storage-sorting/onedrive.md](docs/cloud-storage-sorting/onedrive.md) - OneDrive FileModifyDate-only sorting; metadata ignored.
+  - [docs/cloud-storage-sorting/amazon-photos.md](docs/cloud-storage-sorting/amazon-photos.md) - Amazon Photos metadata-based sorting; similar to Google Photos.
+  - [docs/cloud-storage-sorting/icloud-photos.md](docs/cloud-storage-sorting/icloud-photos.md) - iCloud Photos strict metadata validation; timezone required for multi-device.
 - [docs/runbook-windows.md](docs/runbook-windows.md) - full SOP with script and manual command paths.
 - [docs/verification-and-signoff.md](docs/verification-and-signoff.md) - go/no-go checks before upload.
 - [docs/error-catalog.md](docs/error-catalog.md) - known errors, meaning, and fixes.

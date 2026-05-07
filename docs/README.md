@@ -9,7 +9,12 @@ Start with [reorganized-reference.md](reorganized-reference.md) if you want the 
 ## Recommended reading for beginners
 
 1. [exiftool-foundations.md](exiftool-foundations.md) - first-principles explanation (what ExifTool is, why timeline metadata matters, when parameter changes are truly required).
-2. [google-photos-sorting.md](google-photos-sorting.md) - cloud storage sorting behavior (how Google Photos, Mega, OneDrive prioritize metadata; what tags each media type requires; timezone handling; common failure patterns).
+2. [cloud-storage-sorting/README.md](cloud-storage-sorting/README.md) - cloud storage sorting behavior (how each service prioritizes metadata; what tags each media type requires; timezone handling; common failure patterns).
+   - [cloud-storage-sorting/google-photos.md](cloud-storage-sorting/google-photos.md) - Choose this if uploading to Google Photos
+   - [cloud-storage-sorting/mega.md](cloud-storage-sorting/mega.md) - Choose this if uploading to Mega
+   - [cloud-storage-sorting/onedrive.md](cloud-storage-sorting/onedrive.md) - Choose this if uploading to OneDrive
+   - [cloud-storage-sorting/amazon-photos.md](cloud-storage-sorting/amazon-photos.md) - Choose this if uploading to Amazon Photos
+   - [cloud-storage-sorting/icloud-photos.md](cloud-storage-sorting/icloud-photos.md) - Choose this if uploading to iCloud Photos
 3. [runbook-windows.md](runbook-windows.md) - complete script and manual command SOP.
 4. [../scripts/windows/README.md](../scripts/windows/README.md) - folder-based script index and command reference.
 5. [verification-and-signoff.md](verification-and-signoff.md) - validation checklist before upload.
@@ -67,7 +72,12 @@ Each script now has its own folder under `../scripts/windows/` with a local READ
 ## What to read first
 
 1. [exiftool-foundations.md](exiftool-foundations.md) - beginner-first background and decision logic.
-2. [google-photos-sorting.md](google-photos-sorting.md) - cloud storage sorting behavior and metadata priority.
+2. [cloud-storage-sorting/README.md](cloud-storage-sorting/README.md) - cloud storage sorting: pick your target service and read the corresponding guide.
+   - [cloud-storage-sorting/google-photos.md](cloud-storage-sorting/google-photos.md) - Google Photos
+   - [cloud-storage-sorting/mega.md](cloud-storage-sorting/mega.md) - Mega
+   - [cloud-storage-sorting/onedrive.md](cloud-storage-sorting/onedrive.md) - OneDrive
+   - [cloud-storage-sorting/amazon-photos.md](cloud-storage-sorting/amazon-photos.md) - Amazon Photos
+   - [cloud-storage-sorting/icloud-photos.md](cloud-storage-sorting/icloud-photos.md) - iCloud Photos
 3. [runbook-windows.md](runbook-windows.md) - full script + manual command SOP.
 4. [../scripts/windows/README.md](../scripts/windows/README.md) - each script purpose, command, and output.
 5. [verification-and-signoff.md](verification-and-signoff.md) - validation and sign-off criteria.
