@@ -74,9 +74,9 @@ Always validate before upload with spot checks for both an image and a video.
 
 The conversation has been transformed into script-first operations:
 
-- strategy A runner: `../scripts/windows/run_strategy_a_filename_priority.bat`
-- strategy B runner: `../scripts/windows/run_strategy_b_filemodify_once.bat`
-- strategy C runner: `../scripts/windows/run_strategy_c_sequence_timeline.bat`
-- verification: `../scripts/windows/verify_folder.bat` and `../scripts/windows/verify_file.bat`
+- strategy A runner: `../scripts/windows/run_strategy_a_filename_priority/run_strategy_a_filename_priority.bat`
+- strategy B runner: `../scripts/windows/run_strategy_b_filemodify_once/run_strategy_b_filemodify_once.bat`
+- strategy C runner: `../scripts/windows/run_strategy_c_sequence_timeline/run_strategy_c_sequence_timeline.bat`
+- verification: `../scripts/windows/verify_folder/verify_folder.bat` and `../scripts/windows/verify_file/verify_file.bat`
 
 All script runs generate timestamped logs under `../logs/` for repeatability and audit.

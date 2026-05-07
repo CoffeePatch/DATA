@@ -5,9 +5,9 @@
 Run from target folder:
 
 ```bat
-..\scripts\windows\verify_folder.bat
-..\scripts\windows\verify_file.bat "Media_049685.jpg"
-..\scripts\windows\verify_file.bat "Media_049686.mp4"
+..\scripts\windows\verify_folder\verify_folder.bat
+..\scripts\windows\verify_file\verify_file.bat "Media_049685.jpg"
+..\scripts\windows\verify_file\verify_file.bat "Media_049686.mp4"
 ```
 
 Each run generates a timestamped log in `logs\`.

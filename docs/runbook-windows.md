@@ -25,33 +25,33 @@ Run exactly one strategy script depending on folder type.
 ### Strategy A script (mixed folder, some names include real dates)
 
 ```bat
-..\scripts\windows\run_strategy_a_filename_priority.bat
+..\scripts\windows\run_strategy_a_filename_priority\run_strategy_a_filename_priority.bat
 ```
 
 ### Strategy B script (fresh folder with trusted Date Modified)
 
 ```bat
-..\scripts\windows\run_strategy_b_filemodify_once.bat
+..\scripts\windows\run_strategy_b_filemodify_once\run_strategy_b_filemodify_once.bat
 ```
 
 ### Strategy C script (sequence-only names like Media_XXXXXX)
 
 ```bat
-..\scripts\windows\run_strategy_c_sequence_timeline.bat START_NUM "YYYY:MM:DD HH:MM:SS" STEP_SECONDS
+..\scripts\windows\run_strategy_c_sequence_timeline\run_strategy_c_sequence_timeline.bat START_NUM "YYYY:MM:DD HH:MM:SS" STEP_SECONDS
 ```
 
 Example:
 
 ```bat
-..\scripts\windows\run_strategy_c_sequence_timeline.bat 49682 "2025:08:07 14:34:00" 300
+..\scripts\windows\run_strategy_c_sequence_timeline\run_strategy_c_sequence_timeline.bat 49682 "2025:08:07 14:34:00" 300
 ```
 
 Then verify:
 
 ```bat
-..\scripts\windows\verify_folder.bat
-..\scripts\windows\verify_file.bat "Media_049685.jpg"
-..\scripts\windows\verify_file.bat "Media_049686.mp4"
+..\scripts\windows\verify_folder\verify_folder.bat
+..\scripts\windows\verify_file\verify_file.bat "Media_049685.jpg"
+..\scripts\windows\verify_file\verify_file.bat "Media_049686.mp4"
 ```
 
 ## 2) Manual fallback commands (if scripts are not used)
@@ -128,7 +128,7 @@ Notes:
 Recommended script:
 
 ```bat
-..\scripts\windows\append_datetime_suffix.bat
+..\scripts\windows\append_datetime_suffix\append_datetime_suffix.bat
 ```
 
 Manual equivalent:

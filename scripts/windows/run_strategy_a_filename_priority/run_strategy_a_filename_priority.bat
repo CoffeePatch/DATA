@@ -2,7 +2,7 @@
 setlocal
 
 set "SCRIPT_NAME=strategy_a_filename_priority"
-set "ROOT=%~dp0..\.."
+set "ROOT=%~dp0..\..\.."
 set "LOGDIR=%ROOT%\logs"
 if not exist "%LOGDIR%" mkdir "%LOGDIR%"
 

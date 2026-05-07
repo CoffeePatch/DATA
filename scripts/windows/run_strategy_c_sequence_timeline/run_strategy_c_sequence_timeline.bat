@@ -2,7 +2,7 @@
 setlocal
 
 set "SCRIPT_NAME=strategy_c_sequence_timeline"
-set "ROOT=%~dp0..\.."
+set "ROOT=%~dp0..\..\.."
 set "LOGDIR=%ROOT%\logs"
 if not exist "%LOGDIR%" mkdir "%LOGDIR%"
 

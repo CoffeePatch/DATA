@@ -1,8 +1,8 @@
 @echo off
 setlocal
 
-set "SCRIPT_NAME=normalize_extensions"
-set "ROOT=%~dp0..\.."
+set "SCRIPT_NAME=strategy_b_filemodify_once"
+set "ROOT=%~dp0..\..\.."
 set "LOGDIR=%ROOT%\logs"
 if not exist "%LOGDIR%" mkdir "%LOGDIR%"
 
@@ -27,14 +27,18 @@ if not exist "%ET%" (
   exit /b 2
 )
 
-echo Starting extension normalization
-echo Using ExifTool: %ET%
+echo Strategy B started
 
+echo Step 1/2: extension normalization
 "%ET%" -ext jpg  -if "$FileType eq 'PNG'"  "-FileName=%%f.png" .
 "%ET%" -ext png  -if "$FileType eq 'JPEG'" "-FileName=%%f.jpg" .
 "%ET%" -ext heic -if "$FileType eq 'JPEG'" "-FileName=%%f.jpg" .
 "%ET%" -ext webp -if "$FileType eq 'JPEG'" "-FileName=%%f.jpg" .
 "%ET%" -ext jpg  -if "$FileType eq 'WEBP'" "-FileName=%%f.webp" .
 
-echo Extension normalization completed
+echo Step 2/2: one-time metadata write from trusted FileModifyDate
+"%ET%" -api QuickTimeUTC "-DateTimeOriginal<FileModifyDate" "-QuickTime:CreateDate<FileModifyDate" "-QuickTime:MediaCreateDate<FileModifyDate" "-QuickTime:CreationDate<FileModifyDate" "-CreateDate<FileModifyDate" -ext jpg -ext jpeg -ext mp4 -ext mov -ext heic -ext webp -ext png -overwrite_original_in_place .
+
+echo Strategy B completed
+echo WARNING: Do not rerun this strategy on already-processed files.
 exit /b 0

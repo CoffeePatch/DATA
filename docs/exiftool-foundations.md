@@ -128,9 +128,9 @@ Write one file from trusted file system date:
 
 Repository scripts are the preferred batch method:
 
-- `..\scripts\windows\run_strategy_a_filename_priority.bat`
-- `..\scripts\windows\run_strategy_b_filemodify_once.bat`
-- `..\scripts\windows\run_strategy_c_sequence_timeline.bat START_NUM "YYYY:MM:DD HH:MM:SS" STEP_SECONDS`
+- `..\scripts\windows\run_strategy_a_filename_priority\run_strategy_a_filename_priority.bat`
+- `..\scripts\windows\run_strategy_b_filemodify_once\run_strategy_b_filemodify_once.bat`
+- `..\scripts\windows\run_strategy_c_sequence_timeline\run_strategy_c_sequence_timeline.bat START_NUM "YYYY:MM:DD HH:MM:SS" STEP_SECONDS`
 
 Manual batch mode (runbook equivalent) is documented in [runbook-windows.md](runbook-windows.md).
 

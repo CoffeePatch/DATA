@@ -2,9 +2,9 @@
 
 ## First response order
 
-1. Run `..\scripts\windows\normalize_extensions.bat`
+1. Run `..\scripts\windows\normalize_extensions\normalize_extensions.bat`
 2. Re-run the selected strategy script
-3. Run `..\scripts\windows\verify_folder.bat`
+3. Run `..\scripts\windows\verify_folder\verify_folder.bat`
 
 ## 1) Not a valid JPG (looks more like a PNG)
 
@@ -87,8 +87,8 @@ Action:
 
 ## 9) Quick script mapping for incidents
 
-- extension mismatch incident: `normalize_extensions.bat`
-- mixed folder incident: `run_strategy_a_filename_priority.bat`
-- fresh trusted-folder incident: `run_strategy_b_filemodify_once.bat`
-- sequence-only incident: `run_strategy_c_sequence_timeline.bat`
-- validation incident: `verify_folder.bat` and `verify_file.bat`
+- extension mismatch incident: `normalize_extensions/normalize_extensions.bat`
+- mixed folder incident: `run_strategy_a_filename_priority/run_strategy_a_filename_priority.bat`
+- fresh trusted-folder incident: `run_strategy_b_filemodify_once/run_strategy_b_filemodify_once.bat`
+- sequence-only incident: `run_strategy_c_sequence_timeline/run_strategy_c_sequence_timeline.bat`
+- validation incident: `verify_folder/verify_folder.bat` and `verify_file/verify_file.bat`

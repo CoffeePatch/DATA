@@ -4,7 +4,9 @@ Central documentation and script pack for repeatable media metadata fixes on Win
 
 ## Start here (new users)
 
+- [Organized reference index](docs/reorganized-reference.md)
 - [What is ExifTool and why this repo exists](docs/exiftool-foundations.md)
+- [Cloud storage sorting behavior (Google Photos, Mega, OneDrive)](docs/google-photos-sorting.md)
 - [Windows runbook (full SOP)](docs/runbook-windows.md)
 - [Windows scripts quick reference](scripts/windows/README.md)
 - [Verification and sign-off checklist](docs/verification-and-signoff.md)
@@ -20,20 +22,22 @@ Central documentation and script pack for repeatable media metadata fixes on Win
 1. Open **Command Prompt** in your target media folder.
 2. Pick exactly one strategy script:
    - Mixed folder with some date-bearing names:
-     `..\scripts\windows\run_strategy_a_filename_priority.bat`
+     `..\scripts\windows\run_strategy_a_filename_priority\run_strategy_a_filename_priority.bat`
    - Fresh folder where Date Modified is trusted:
-     `..\scripts\windows\run_strategy_b_filemodify_once.bat`
+     `..\scripts\windows\run_strategy_b_filemodify_once\run_strategy_b_filemodify_once.bat`
    - Sequence-only names (for example `Media_XXXXXX`):
-     `..\scripts\windows\run_strategy_c_sequence_timeline.bat START_NUM "YYYY:MM:DD HH:MM:SS" STEP_SECONDS`
+     `..\scripts\windows\run_strategy_c_sequence_timeline\run_strategy_c_sequence_timeline.bat START_NUM "YYYY:MM:DD HH:MM:SS" STEP_SECONDS`
 3. Verify results:
-   - `..\scripts\windows\verify_folder.bat`
-   - `..\scripts\windows\verify_file.bat "filename.ext"`
+   - `..\scripts\windows\verify_folder\verify_folder.bat`
+   - `..\scripts\windows\verify_file\verify_file.bat "filename.ext"`
 4. Review logs in `logs\`.
 
 ## Documentation map
 
+- [docs/reorganized-reference.md](docs/reorganized-reference.md) - curated reading order and future-reference capture.
 - [docs/README.md](docs/README.md) - step-by-step reading and execution order.
 - [docs/exiftool-foundations.md](docs/exiftool-foundations.md) - beginner explanation of metadata, cloud timeline behavior, and parameter choices.
+- [docs/google-photos-sorting.md](docs/google-photos-sorting.md) - cloud storage sorting: how Google Photos, Mega, OneDrive prioritize metadata; what tags each media type requires; timezone handling; common failure patterns.
 - [docs/runbook-windows.md](docs/runbook-windows.md) - full SOP with script and manual command paths.
 - [docs/verification-and-signoff.md](docs/verification-and-signoff.md) - go/no-go checks before upload.
 - [docs/error-catalog.md](docs/error-catalog.md) - known errors, meaning, and fixes.
@@ -41,12 +45,14 @@ Central documentation and script pack for repeatable media metadata fixes on Win
 
 ## Script catalog
 
-- [scripts/windows/README.md](scripts/windows/README.md) - what each script does, when to use it, expected output.
-- [scripts/windows/run_strategy_a_filename_priority.bat](scripts/windows/run_strategy_a_filename_priority.bat)
-- [scripts/windows/run_strategy_b_filemodify_once.bat](scripts/windows/run_strategy_b_filemodify_once.bat)
-- [scripts/windows/run_strategy_c_sequence_timeline.bat](scripts/windows/run_strategy_c_sequence_timeline.bat)
-- [scripts/windows/verify_folder.bat](scripts/windows/verify_folder.bat)
-- [scripts/windows/verify_file.bat](scripts/windows/verify_file.bat)
+- [scripts/windows/README.md](scripts/windows/README.md) - index for the per-script folders.
+- [scripts/windows/normalize_extensions/README.md](scripts/windows/normalize_extensions/README.md)
+- [scripts/windows/run_strategy_a_filename_priority/README.md](scripts/windows/run_strategy_a_filename_priority/README.md)
+- [scripts/windows/run_strategy_b_filemodify_once/README.md](scripts/windows/run_strategy_b_filemodify_once/README.md)
+- [scripts/windows/run_strategy_c_sequence_timeline/README.md](scripts/windows/run_strategy_c_sequence_timeline/README.md)
+- [scripts/windows/append_datetime_suffix/README.md](scripts/windows/append_datetime_suffix/README.md)
+- [scripts/windows/verify_folder/README.md](scripts/windows/verify_folder/README.md)
+- [scripts/windows/verify_file/README.md](scripts/windows/verify_file/README.md)
 
 ## Important safety rule
 
